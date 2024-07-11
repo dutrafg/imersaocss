@@ -1,0 +1,44 @@
+body {
+    background-image: url(img/Sunset_Over_Lake_Lugano_by_Alexey_Kulik.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: tahoma, sans-serif;
+    height: 100vh;
+}
+
+.menu {
+    background-color: white;
+    
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.menu li {
+    list-style: none;
+    
+}
+
+.menu a {
+    text-decoration: none;
+    color: blueviolet;
+
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+.site-subtitle,
+.site-title{
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 1.5rem;
+   
+}
+.site-subtitle{
+    font-style: italic;
+}
+
