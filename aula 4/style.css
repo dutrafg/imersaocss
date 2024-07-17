@@ -1,0 +1,201 @@
+@import url(reset.css);
+
+body {
+    background-image: url(img/fundo.jpg);
+    /* background-size: auto 100vh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    font-size: 12px;
+}
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos*/
+
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+
+}
+
+.titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s ease 1s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.menu li {
+    list-style: none;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: teal;
+    display: block;
+    padding: 10px;
+    transition: background-color, color 0.5s;
+}
+
+.menu a:active,
+.menu a:hover {
+    text-decoration: underline;
+    background-color: teal;
+    color: white;
+
+}
+
+.site-subtitle,
+.site-title {
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 1.5rem;
+
+}
+
+.site-title {
+    font-size: 2rem;
+    /* font-family: open sans; */
+}
+
+.site-subtitle {
+    font-style: italic;
+    font-family: tahoma;
+    line-height: 1.8em;
+}
+
+#projetos {
+    padding-bottom: 10px;
+}
+
+.contato,
+.portfolio {
+    padding: 1.5rem;
+    color: white;
+    min-height: 100vh;
+
+
+}
+
+.contato h2,
+.portfolio h2 {
+    font-family: tahoma;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 480px) {
+    .grid {
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 840px) {
+    .grid {
+        grid-template-columns: repeat(3, 240px);
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 10px;
+    transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.2);
+}
+
+#contatos {
+    padding: 10px;
+}
+
+.contato .grid {
+    text-align: center;
+}
+
+.icons {
+    display: grid;
+}
+
+@media (min-width: 375px) {
+    .icons {
+        grid-template-columns: repeat(2, 150px);
+    }
+}
+
+@media (min-width: 840px) {
+    .icons {
+        grid-template-columns: repeat(4, 150px);
+
+    }
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 3rem;
+    transition: text-shadow .5s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
+}
